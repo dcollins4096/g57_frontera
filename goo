@@ -1,0 +1,5 @@
+#!/bin/tcsh
+mv ~/Downloads/g57* .
+table2.py g57*
+make
+#end

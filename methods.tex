@@ -1,0 +1,22 @@
+The code we will use is Enzo \citep{Collins10,Bryan14}, an open source code that
+has been used for a number of astrophysics applications
+\citep{Abel02,CorreaMagnus23}.  Enzo is an adaptive mesh refinement (AMR) code
+that dynamically adds resolution elements as the system requires it, using the
+strategy of \citet{Berger89} and \citet{Balsar01}.  We will
+use the constrained transport (CT) module \citep{Gardiner05,Collins10} that conserves the
+divergence of the field to machine precision.  It uses FFT-based gravity for the
+root grid and multigrid relaxation for gravity on fine grids.  The base MHD
+solver is a higher order Godunov method.  
+
+There are three primary systems in the code that contribute to the performance.
+The MHD method is entirely local, and thus scales extremely well.  The main
+gravity solver is based on Fourier transforms, and thus scales like $N\ln N$.
+To perform the gravity solve, the cube is rearanged into pencils for the FFT.
+Between the $\ln N$ and rearangement, the gravity solver scales less perfectly
+than the hydro.  The third system is the AMR overhead, which includes
+communication between the different grids and the memory needs of the metadata.
+This is heavily dependent on the layout of the grid patches, and can become
+quite demanding.  We mitigate the overhead by forcing the grid patches to be of
+uniform size and relatively large.
+
+\red{We use ideal MHD and then Chemistry}

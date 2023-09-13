@@ -1,0 +1,23 @@
+\input{tableX}
+
+\section{Request Details}
+
+The request is outlined in Table \ref{table2}.
+The total request is found as
+\begin{align}
+SU &= t_{wall} N_N\\
+t_{wall} &= \frac{N_Z N_U}{\zeta} \frac{1}{N_C}.
+\end{align}
+
+For the \emph{turbulence} simulations, $N_Z=2048^3$.  For the galaxy
+simulations, $N_Z$ will be computed from the grid layout.  We construct each level in grid patches of $32^3$ zones each.  
+Consistent patch size allows us to optimize the memory usage of the simulation.
+The finest level is a thin pancake of
+$100\times100\times1$ grids. The galaxy will be  resolved to 6.25 pc for 
+the entire disk to the dust scale height of $\pm 100$pc and a radius of 10kpc.
+Resolution increases by a factor of 2 each level.  The next two levels increase
+the aspect ratio of the refined region ($54\times54\times3$ and
+$30\times30\times11$ grids, respectively), and the remaining levels are $16\times 16 \times 16$
+grids.  
+
+

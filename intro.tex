@@ -1,0 +1,83 @@
+
+We are requesting \request\ on Frontera in order to perform several studies of
+the interstellar medium (ISM).  This is part of an effort to observe
+gravitational waves from the big bang, imprinted in the cosmic microwave background (CMB).  These observations are hampered by the
+dust and plasma in our own galaxy, which outshines the CMB.  We will simulate
+the plasma in the ISM in two ways to characterize its observational properties.
+One study will be high resolution simulations of plasma turbulence, and the
+other suite will be simulations of isolated galaxies.
+
+\section{Background}
+
+Gravitational waves generated at
+the beginning of the Universe leave an imprint in the polarization of the cosmic
+microwave background (CMB).  The CMB is the oldest light observable in the
+Universe, and gives us a snapshot of its very early stages.
+Observing the polarization of the CMB will give us a measurement of
+gravitational waves that were produced at the formation of the Universe.
+Unfortunately, the dusty plasma in our own Milky Way also produces polarized
+light that is brighter than the primordial signal.  Our simulations will study
+the polarization properties of the light from the plasma in Milky Way type
+galaxies.  Understanding this polarization is essential for its removal from
+future measurements of the CMB.
+
+The Planck satellite measured the polarization of the whole sky.  Polarization,
+having direction on the sky, needs two quantities for its description. The most
+useful option are the parity-even $E$-mode and parity-odd $B$-mode.  
+The only source of $B-$ mode polarization in the CMB are gravitational waves.
+So searching for $B-$modes in the CMB will prove quite profitable.  However, the
+dusty, magnetized plasma and synchrotron electrons in our own galaxy produce
+$B-$mode polarization.  So this must be understood so it can be removed.  
+
+The Planck satellite measured the $E$- and $B$-mode signals over the entire sky.
+They found that both are relatively uniform power-laws in wavenumber, with power
+spectra given by powerlaws
+\begin{align}
+C_\ell^{EE} = A^{EE} k^{\alpha^{EE}},
+\end{align}
+for $E-$mode and a similar expression for $B-$mode.  They found that the slopes
+are roughly equal, $\alpha^{EE}\sim\alpha^{BB}\sim-2.5$, and the $B-$mode have
+roughly half the power of the $E-$mode.  
+
+We have shown (Stalpes et al 2023, in prep) that the slopes of the polarization
+are directly related to the Mach number, $\mach=v/c_s$, the ratio of
+r.m.s velocity to sound speed, and \alf\ mach number, $\alfmach=v/v_A$, where
+$v_A$ is the speed of magnetic disturbances.  Increasing \mach\ makes for more
+filamentary structure in the cloud, and slopes in line with what Planck
+observed.  We ran a suite of \mach = (\half,1,2,3,4,5,6) and \alfmach=(\half,1,2).  After
+interpolating, we predict that the observed values of $\alpha^{EE}$ and
+$\alpha^{BB}$ are best matched by plasma with \mach=4.7 and \alfmach=1.5. The
+study presented in Stalpes et al were run at a modest resolution of $512^3$.  
+
+Another curious finding in the Planck data is a correlation between the total
+signal, $T-$mode, which is parity-even, and the parity-odd $B-$mode.  In principle, these should be
+uncorrelated, but the Planck satellite measured a non-zero correlation at the
+5\% level.  The results from Stalpes et al (2023) show that turbulence alone can
+account for such a correlation only at the 2\% level at best, and these were
+relatively low resolution studies.  It is entirely likely that the $TB$
+correlation comes from large scale features in the dust and magnetic field
+morphology.  To properly reproduce the large scale magnetic field, we will
+simulate an entire Milky Way sized galaxy as well as the circumgalactic medium
+(CGM) that surrounds it. The dust that we are interested in, as well as the star
+formation and explosions that determine the energetics of the galaxy, all happen
+in a thin disk, roughly 100pc thick and 20,000pc across.  Plasma is ejected from
+the disk by supernovae, and expelled into the CGM, where it cools and falls back
+to the disk.  This baryon cycling dictates the star formation activity in the
+galaxy and impacts the magnetic field strength and morphology throughout the
+system.  All of these pieces are important for a complete picture of the
+polarized sky.
+
+We propose two suites of simulations.  The first is a continuation of the
+moderate resolution turbulent boxes presented in Stalpes et al (2023).  In that
+study, we predict that a Mach number of 4.7 and an \alf\ Mach number of 1.5
+reproduce the sky.  We will perform two simulations at $2048^3$.  These
+simulations will test our prediction, and provide high quality datasets that
+reproduce the salient features of the sky that can be used to test foreground
+removal algorithms algorithms and ISM models.  While these simulations are quite
+large, the excellent scaling and our years of experience guarantee success.
+The second suite of simulations
+is a set of three isolated galaxies that will simultaneously provide high
+resolution on the mid plane, and properly resolve the environment and boundary
+conditions of the galaxy.  These will be used initially to test CMB foreground
+models, and will also have many applications beyond the CMB.  These galaxies
+will be a stack of nine fixed resolution levels at roughly $512^3$ per level.
