@@ -5,10 +5,7 @@ simulations, the AMR structure will be constructed in layers of grids with
 $32^3$ zones each centered on the midplane of the galaxy. The outer box, level
 0, is
 $8.2\sci{5}$pc on a side, and the finest level has a resolution of 6.25 pc.
-For all simulations, the number of updates for each level is $T/\Delta t$.  The
+For all simulations, the number of updates for each level is $N_U=T/\Delta t$.  The
 total cost $SU=N_Z * T/\Delta t / \zeta / N_C * N_N$, and
-The total disk is $N_Z*N_F*8$ bytes, where $N_F$ is the number of fields.
-For the \emph{turbulence} simulations, $N_C=32,768$, $N_N=586$, $N_F=20$, and
-$\zeta=4\sci{5}$.  For the \emph{galaxy} simulations, $N_C=512$, $N_N=32$
-$N_F=27$, and
-$\zeta = 10^4$.  Details can be found in the main text. }
+The total disk is $4*N_Z*N_F*N_D$ bytes, where $N_F$ is the number of fields and
+$N_D$ is the number of outputs saved. }

@@ -12,16 +12,16 @@ o: $(stuff)
 	pdflatex ms
 
 
-scaling: Scaling.tex
-	pdflatex Scaling
-	pdflatex Scaling
-	bibtex Scaling
-	pdflatex Scaling
-	pdflatex Scaling
+scaling: scaling.tex
+	pdflatex scaling
+	pdflatex scaling
+	bibtex scaling
+	pdflatex scaling
+	pdflatex scaling
 
-progress: Progress.tex
-	pdflatex Progress
-	pdflatex Progress
-	bibtex Progress
-	pdflatex Progress
-	pdflatex Progress
+progress: progress.tex
+	pdflatex progress
+	pdflatex progress
+	bibtex progress
+	pdflatex progress
+	pdflatex progress
