@@ -1,0 +1,30 @@
+\begin{table} \begin{center} \input{table1_caption} \label{table2}																				
+\begin{tabular}{		l		r		r						r		r		r		r		}
+		\hline																		
+		suite	&	$(\mach, \alfmach)$	&	&						$T$	&	$\Delta t$	&	$N_Z$	&	SU	\\	
+		\hline																		
+		\emph{turbulence}	&	(4.7, 1.5)	&	&						0.64	&	1.1E-06	&	$2048^3$	&	6.36E+04	\\	
+		\emph{turbulence}	&	(8, 1.5)	&	&						0.31	&	6.6E-07	&	$2048^3$	&	5.05E+04	\\	
+		\hline																		
+			&		&	&							&	\textbf{Turbulence:} Disk	&	1.28E+04	Gb & SU:	1.14E+05	\\	
+		\hline																		
+		suite	& 	Level	&	grid layout	&					$T$[Gyr]	&	$\Delta t$[Gyr]	&	$N_Z$	&	SU	\\	
+		\hline																		
+		\emph{galaxy}	&	8	&$	100	\times	100	\times	1	$&	2	&	2.3E-03	& $(	689	)^3$&	2.49E+04	\\	
+		\emph{galaxy}	&	7	&$	54	\times	54	\times	3	$&	2	&	4.6E-03	& $(	659	)^3$&	1.09E+04	\\	
+		\emph{galaxy}	&	6	&$	30	\times	30	\times	11	$&	2	&	9.1E-03	& $(	687	)^3$&	6.16E+03	\\	
+		\emph{galaxy}	&	5	&$	16	\times	16	\times	16	$&	2	&	1.8E-02	& $(	512	)^3$&	1.27E+03	\\	
+		\emph{galaxy}	&	4	&$	16	\times	16	\times	16	$&	2	&	3.7E-02	& $(	512	)^3$&	6.37E+02	\\	
+		\emph{galaxy}	&	3	&$	16	\times	16	\times	16	$&	2	&	7.3E-02	& $(	512	)^3$&	3.19E+02	\\	
+		\emph{galaxy}	&	2	&$	16	\times	16	\times	16	$&	2	&	1.5E-01	& $(	512	)^3$&	1.59E+02	\\	
+		\emph{galaxy}	&	1	&$	16	\times	16	\times	16	$&	2	&	2.9E-01	& $(	512	)^3$&	7.96E+01	\\	
+		\emph{galaxy}	&	0	&$	16	\times	16	\times	16	$&	2	&	5.8E-01	& $(	512	)^3$&	3.98E+01	\\	
+		\hline																		
+			&		&	&							&	One Galaxy: Disk	&	7.02E+03	Gb & SU:	4.44E+04	\\	
+			&		&	&							&	\textbf{Three Galaxies:} Disk	&	2.11E+04	Gb & SU:	1.33E+05	\\	
+			&		&	&							&	\textbf{Archive}: Disk	&	1.50E+05	Gb & 		\\	
+		\hline																		
+			&		&	&							&	\textbf{Total:} Disk	&	1.84E+05	Gb & SU:	2.47E+05	\\	
+\end{tabular}																				
+\end{center}																				
+\end{table}																				

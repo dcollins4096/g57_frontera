@@ -1,0 +1,19 @@
+
+
+We will perform two suites of simulations; one will be a pair of high resolution $2048^3$
+simulations of plasma turbulence, and the other will be three high resolution
+AMR simulations of isolated galaxies.  There will be many things to measure from
+these simulations, our first focus is to study the observed polarization produced by
+plasma turbulence in the galaxy.  The study of this dusty, magnetized turbulence
+will allow us to remove the polarization signal due to our own galaxy from the
+polarization of the cosmic microwave background (CMB).  This, in turn, will
+allow us to see gravitational waves from the big bang.
+
+The code we will use is Enzo \citep{Collins10, Bryan14}.  This is an open source
+adaptive mesh refinement (AMR) code that has been used for many astrophysical
+applications on the world's largest computers.  Enzo uses higher order Godunov
+methods to solve the MHD equations, fourier transform based methods for gravity,
+and the algorithm of \citet{Berger89} for the AMR.  The code also includes
+chemistry and star particles, but their cost is negligible compared to the MHD,
+Gravity, and AMR.  Here we will profile the performance of the three primary
+systems in the manner they will be used in the proposed simulations.
